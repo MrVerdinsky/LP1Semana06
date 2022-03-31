@@ -23,8 +23,21 @@ namespace MyGame
 
         public float GetShield() => health;
 
+        public string GetName() => name;
+
         public string SetName(string name) => name.Trim();
 
+        public void TakeDamage(float damage)
+        {
+            shield -= damage;
+            if (shield < 0)
+            {
+                float damageStillToINflict = -shield;
+                shield = 0;
+                health -= damageStillToINflict;
+                if (health < 0) health = 0;
+            }
+        }
 
     }
 }
