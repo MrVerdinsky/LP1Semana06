@@ -14,10 +14,17 @@ namespace MyGame
 
         public Enemy(string name)
         {
-            this.name = name;
+            this.name = SetName(name);
             health = 100;
             shield = 0;
         }
+
+        public float GetHealth() => health;
+
+        public float GetShield() => health;
+
+        public string SetName(string name) => name.Trim();
+
 
     }
 }
