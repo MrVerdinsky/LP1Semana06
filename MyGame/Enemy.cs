@@ -11,14 +11,21 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        private static int nPowerUps;
 
         public Enemy(string name)
         {
             this.name = SetName(name);
             health = 100;
             shield = 0;
+
+        }
+        static Enemy()
+        {
+            nPowerUps = 0; 
         }
 
+        public static float GetNPowerUps() => nPowerUps;
         public float GetHealth() => health;
 
         public float GetShield() => health;
@@ -41,7 +48,7 @@ namespace MyGame
 
         public void PickUpPowerUp(PowerUp pwrUp, float value)
         {
-
+            nPowerUps++;
             if (pwrUp == PowerUp.Health)
             {
                 health += value;
