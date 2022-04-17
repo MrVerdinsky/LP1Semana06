@@ -43,7 +43,7 @@ namespace MyGame
                 Console.WriteLine();
             }
             Console.WriteLine($"Number of Power Ups Picked Up: {Enemy.GetNPowerUps()}");
-            Console.WriteLine("Merci d’utiliser ce programme!");
+            Console.WriteLine("Thank you for using this program");
             
         }
     }
